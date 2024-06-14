@@ -1,0 +1,13 @@
+Ceníme práci na projektu! 🏆 Prohlédli jsme si kód a máme k němu následující poznámky:
+
+1. Pojmenování identifikátorů - Třídy a proměnné mají většinou vhodně pojmenované identifikátory. Název třídy Sprava je možná příliš obecná a mohla by tedy být specifičtější, například SpravaPojistencu. Metoda zobarzMenu má překlep, správně by měla být zobrazMenu. Co mi chybí, tak jsou modifikátory přístupu ve třídě Menu a Sprava, kde Scanner, Sprava a List nemají explicitně daný modifikátor private kvůli zapouzdření, protože takhle jsou označeny jako "package private".
+2. Dodržení principů SRP a SoC - Třída Sprava má více zodpovědnosti než by měla mít. Probíhá v ní jak logika přidávání uživatelů, tak i ukládaní uživatelů. Rozhodně doporučuji tuto třídu upravit a přidat další třídu.
+3. Vhodný výběr datových typů - Většinou dobře zvolené datové typy, avšak telefonní číslo je obecně bezpečnější ukládat jako String kvůli mezinárodním formátům a také z důvodu, že s ním vyloženě nepracujeme jako s číslem.
+4. Formátování kódu - V třídě Menu bych klasický switch upravil do jeho oficiální podoby, kdy příkazy jsou na jednotlivých řádcích a v case 4 bych zvolil opět break, nikoliv return.
+5. Duplicitní kód a nekonečné cykly - Klidně bych zadávání jména a příjmení vložil do samostatné metody, jelikož se tento kousek kódu opakuje, jinak v pořádku.
+6. Validace vstupních dat - Existuje nějaká základní validace jména a příjmení, ale chybí ošetření chybných vstupů u číselných hodnot (vek, telefon).
+7. Logičnost a složitost - Algoritmy jsou jednoduché a přiměřené účelu aplikace.
+8. Komentáře - Jsou, ale dalo by se na nich ještě zapracovat. Dokumentační komentáře postrádají popisky jednotlivých proměnných a i u metod co něco vrací.
+9. Celkové hodnocení - Aplikace splňuje zadání. Kód je celkově dobře napsaný, s menšími problémy v názvosloví a oddělení funkcionalit. Rozhodně bych doplnil modifikátory přístupu. Mohlo by být vhodné přidat robustnější ošetření vstupů a rozšířit třídu Sprava tak, aby se starala pouze o data, zatímco uživatelské interakce by byly řízeny jinou třídou. Doporučuji si projít "Lekce 24 - Jak správně rozdělit Java aplikace do tříd - SRP a SoC" v Java OOP.
+
+Doporučujeme případné výtky v kódu opravit, abyste jej mohli pak prezentovat budoucímu zaměstnavateli v co nejlepší kvalitě. Pokud byste potřebovali s čímkoli pomoci, naplánujte si s námi konzultaci, rádi vám poradíme!
